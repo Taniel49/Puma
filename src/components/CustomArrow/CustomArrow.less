@@ -1,0 +1,41 @@
+.custom-arrow_hidden {
+  visibility: hidden;
+}
+
+.custom-arrow-header_next {
+  background-image: url("./../../images/header-arrow.svg");
+  right: -90px;
+  width: 70px;
+  height: 70px;
+}
+
+.custom-arrow-header_next::before {
+  visibility: hidden;
+}
+
+.custom-arrow-header_next:hover {
+  background-image: url("./../../images/header-arrow.svg");
+  transition: ease-in;
+  opacity: 0.8;
+}
+
+@media screen and (max-width: 767px) {
+  .custom-arrow-header_next {
+    right: -36px;
+    width: 35px;
+    height: 35px;
+    background-size: contain;
+  }
+
+  .custom-arrow-header_next:hover {
+    background-image: url("./../../images/header-arrow.svg");
+    right: -36px;
+    width: 35px;
+    height: 35px;
+    background-size: contain;
+    transition: ease-in;
+    opacity: 0.8;
+  }
+}
+
+
