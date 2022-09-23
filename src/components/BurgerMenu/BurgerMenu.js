@@ -1,19 +1,15 @@
 import React from 'react';
 import './BurgerMenu.less';
 
-function BurgerMenu(props) {
+function BurgerMenu({isOpenMenu, handleCloseMenu}) {
     const MenuClassName = (
-        `burger-menu ${props.isOpenMenu ? 'burger-menu_opened' : ''}`
+        `burger-menu ${isOpenMenu ? 'burger-menu_opened' : ''}`
     );
-
-    function closeMenu (){
-        props.handleCloseMenu()
-    }
 
     return (
         <div className={MenuClassName}>
             <div className="burger-menu__container">
-                <button className="burger-menu__close-button" type="button" onClick={closeMenu}></button>
+                <button className="burger-menu__close-button" type="button" onClick={handleCloseMenu}></button>
                 <div className="burger-menu__navigation">
                         <button className="burger-menu__navigation-button">About</button>
                         <button className="burger-menu__navigation-button">Feature</button>

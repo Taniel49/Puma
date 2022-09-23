@@ -1,9 +1,9 @@
 import React from "react";
 import Slider from "react-slick";
-import bootImage from "../images/SYDBcVgqXO-removebg-preview 1.svg";
-import {CustomArrow} from "../components/CustomArrow/CustomArrow";
+import bootImage from "../../assets/images/SYDBcVgqXO-removebg-preview 1.svg";
+import {CustomArrow} from "../CustomArrow/CustomArrow";
 
-export const CustomSlider = (props) => {
+export const CustomSlider = ({customArrowNextClassList, customArrowPrevClassList}) => {
     const settings = {
         dots: false,
         infinite: true,
@@ -13,8 +13,8 @@ export const CustomSlider = (props) => {
         autoplay: true,
         autoplaySpeed: 2000,
         cssEase: "linear",
-        nextArrow: <CustomArrow customArrowClassList={props.customArrowNextClassList}/>,
-        prevArrow: <CustomArrow customArrowClassList={props.customArrowPrevClassList}/>
+        nextArrow: <CustomArrow customArrowClassList={customArrowNextClassList}/>,
+        prevArrow: <CustomArrow customArrowClassList={customArrowPrevClassList}/>
     };
     return (
         <div>

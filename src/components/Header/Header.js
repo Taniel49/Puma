@@ -1,20 +1,16 @@
 import React from 'react';
 import './Header.less';
 import './__slider-container/header__slider-container.less';
-import {CustomSlider} from '../../vendor/Slider';
+import {CustomSlider} from '../Slider/Slider';
 import BurgerMenu from "../BurgerMenu/BurgerMenu";
-import logo from '../../images/puma_logo.svg';
-import menu from '../../images/menu.svg';
+import logo from '../../assets/images/puma_logo.svg';
+import menu from '../../assets/images/menu.svg';
 
 function Header() {
     const [isOpenMenu, setIsOpenMenu] = React.useState(false);
 
-    function handleOpenMenu() {
-        setIsOpenMenu(true);
-    }
-
-    function handleCloseMenu() {
-        setIsOpenMenu(false);
+    function handleToggleMenu() {
+        setIsOpenMenu(!isOpenMenu)
     }
 
     return (
@@ -22,7 +18,9 @@ function Header() {
             <div className="header__container">
                 <nav className="menu">
                     <div className="menu__flex-container">
-                        <img className="logo" src={logo} alt='Puma logo'/>
+                        <a href="#">
+                            <img className="logo" src={logo} alt='Puma logo'/>
+                        </a>
                         <div className="menu__navigation">
                             <button className="menu__navigation-button">About</button>
                             <button className="menu__navigation-button">Feature</button>
@@ -30,7 +28,7 @@ function Header() {
                         </div>
                     </div>
                     <button className="buy-button">Buy now</button>
-                    <button className="menu__burger-button" onClick={handleOpenMenu}><img src={menu} alt="Меню"/>
+                    <button className="menu__burger-button" onClick={handleToggleMenu}><img src={menu} alt="Меню"/>
                     </button>
                 </nav>
                 <div className="header__main">
@@ -47,7 +45,7 @@ function Header() {
                 </div>
             </div>
             <BurgerMenu isOpenMenu={isOpenMenu}
-                        handleCloseMenu={handleCloseMenu}/>
+                        handleCloseMenu={handleToggleMenu}/>
         </header>
     );
 }
