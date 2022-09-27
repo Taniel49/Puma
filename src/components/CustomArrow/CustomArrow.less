@@ -1,0 +1,42 @@
+.custom-arrow_hidden {
+  visibility: hidden;
+}
+
+.custom-arrow-header_next {
+  background-image: url("../../assets/images/header-arrow.svg");
+  right: -90px;
+  width: 70px;
+  height: 70px;
+
+  &::before {
+    visibility: hidden;
+  }
+
+  &:hover {
+    background-image: url("../../assets/images/header-arrow.svg");
+    transition: ease-in;
+    opacity: 0.8;
+  }
+
+  @media screen and (max-width: 767px) {
+    right: -36px;
+    width: 35px;
+    height: 35px;
+    background-size: contain;
+
+
+    &:hover {
+      background-image: url("../../assets/images/header-arrow.svg");
+      right: -36px;
+      width: 35px;
+      height: 35px;
+      background-size: contain;
+      transition: ease-in;
+      opacity: 0.8;
+    }
+  }
+
+}
+
+
+

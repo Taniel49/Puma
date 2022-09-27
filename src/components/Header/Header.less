@@ -1,0 +1,60 @@
+@import "../../utils/vars";
+
+@import "./__container/header__container";
+@import "./__main/header__main";
+@import "./__motto/header__motto";
+@import "./__text/header__text";
+@import "./_orange-text/header_orange-text";
+@import "./buy-button/buy-button";
+@import "./menu/menu";
+@import "./menu/__burger-button/menu__burger-button";
+@import "./menu/__burger-button/menu__burger-button";
+@import "./menu/__navigation/menu__navigation";
+@import "./menu/__flex-container/menu__flex-container";
+@import "./menu/__navigation-button/menu__navigation-button";
+
+
+.header {
+  &::after {
+    content: '';
+    background: linear-gradient(90deg, #EE5514 1.14%, rgba(238, 85, 20, 0) 133.88%);
+    opacity: 0.1;
+    position: absolute;
+    width: 1188px;
+    height: 649px;
+    left: 0;
+    top: 0;
+    transform: skewX(-15deg);
+    transform-origin: top left;
+    z-index: -1;
+
+    @media screen and (max-width: 1599px) {
+      width: 928px;
+    }
+
+    @media screen and (max-width: 1023px) {
+      height: 917px;
+      width: 740px;
+    }
+
+    @media screen and (max-width: 767px) {
+      transform: none;
+      width: 100%;
+      height: 770px;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,27 @@
+@import "../../utils/vars";
+
+@import url("__container/burger-menu__container");
+@import url("__navigation/burger-menu__navigation");
+@import url("__navigation-button/burger-menu__navigation-button");
+@import url("__close-button/burger-menu__close-button.css");
+
+.burger-menu {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.3s, opacity 0.3s linear;
+  display: flex;
+  position: fixed;
+  font-family: @poppins-font;;
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  width: 100%;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  justify-content: right;
+
+  &_opened {
+    visibility: visible;
+    opacity: 1;
+  }
+}
